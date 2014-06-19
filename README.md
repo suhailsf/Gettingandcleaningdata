@@ -1,5 +1,6 @@
 Gettingandcleaningdata
 ======================
+The script performs the operation in the following sequence: 
 #Step 1: Import Activity label
 
 #Step 2: Assign labels to columns
@@ -43,12 +44,3 @@ Gettingandcleaningdata
 #Step 21: Take averages by grouping
 
 #Step 22: Export the averaged tidyset
-
-#Step 20: Export tidydata
-write.table(tidydata,"tidydata.txt")
-
-#Step 21: Take averages by grouping
-averagedata <- aggregate(x = tidydata, by = list(tidydata$SubjectId, tidydata$ActivityId), FUN = "mean")
-
-#Step 22: Export the averaged tidyset
-write.table(averagedata,"averagedata.txt")
